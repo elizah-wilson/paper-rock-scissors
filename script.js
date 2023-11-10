@@ -4,16 +4,20 @@ let cpuChoice;
 let inputValue;
 
 function cpuValue() {
+    //               0          1       `2
     const values = ["ROCK", "PAPER", "SCISSORS"];
-    let randomIndex = Math.floor(Math.random() * values.length) 
-    cpuChoice = values[randomIndex]
+    let randomIndex = Math.floor(Math.random() * values.length) //why did I need to declare outside of function and initialize inside function?
+    // ^ randomly grabs an index from the array
+    // need to get the value of the index
+    cpuChoice = values[randomIndex] //allows me to get the value of the index that was randomly selected
     return cpuChoice;
 }
 
 function getUserValue() {
-    for (i = 0; i < userInputs.length; i++) {
-        if (userInputs[i].checked == true) {    
-            inputValue = userInputs[i].value; 
+    for (i = 0; i < userInputs.length; i++) {     // use for loop to access each input elements in the array
+        if (userInputs[i].checked == true) {    // check if the entire element (i) inside of the array (userInputs) is checked --> output <input type="radio" name="choice" id="SCISSORS" value="SCISSORS">
+            inputValue = userInputs[i].value; // get value of input using method --> outputs value: PAPER, ROCK, or SCISSORS
+        }
     }
 }
 
