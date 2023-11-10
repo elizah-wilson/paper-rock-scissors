@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPER, ROCK, SCISSORS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<div class="container">
+    <div id="title">ROCK PAPER SCISSORS</div>
+    
+    <div class="inputs-container">
+        <div class="inputs">
+            <div>
+                <label for="ROCK">
+                    <img src="assets/ROCK.png" alt="clip art of Mickey Mouse hand in a fist to represent ROCK.">  
+                </label>
+            </div>
+            <div>
+                <input type="radio" name="choice" id="ROCK" value="ROCK">
+            </div>
+        </div>
+
+        <div class="inputs">
+            <div>
+                <label for="PAPER">
+                    <img src="assets/PAPER.png" alt="clip art of Mickey Mouse Hand stretched out to represent PAPER.">        
+                </label>
+            </div>
+            <div>
+                <input type="radio" name="choice" id="PAPER" value="PAPER">
+            </div>
+        </div>
+
+        <div class="inputs">
+            <div>
+                <label for="SCISSORS">
+                    <img src="assets/scissor.png" alt="clip art of Mickey Mouse hand in a peace sign to represent SCISSORS.">
+                </label>
+            </div>
+            <div>
+                <input type="radio" name="choice" id="SCISSORS" value="SCISSORS">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="result"></div>
+    <br>
+    <button onclick="shoot()">Shoot!</button>
+</div> 
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
