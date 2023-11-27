@@ -1,5 +1,6 @@
 const result_div = document.querySelector(".result")
 const userInputs = document.getElementsByName("choice");
+
 let cpuChoice;
 let inputValue;
 
@@ -13,8 +14,8 @@ function cpuValue() {
 function getUserValue() {
     for (i = 0; i < userInputs.length; i++) {     
         if (userInputs[i].checked == true) {
-            inputValue = userInputs[i].value;
-        }
+            inputValue = userInputs[i].value; 
+        }                                    
     }
 }
 
@@ -34,25 +35,15 @@ function shoot() {
     getUserValue() 
     cpuValue()
 
-    if ((cpuChoice === "PAPER") && (inputValue === "PAPER")) {
+    if(inputValue === cpuChoice) {
         tie()
-    } else if ((cpuChoice === "SCISSORS") && (inputValue === "SCISSORS")) {
-        tie()
-    } else if ((cpuChoice === "ROCK") && (inputValue === "ROCK")) {
-        tie()
-    } else if ((cpuChoice === "PAPER") && (inputValue === "ROCK")) {
-        lose()
-    } else if ((cpuChoice === "ROCK") && (inputValue === "SCISSORS")) {
-        lose()
-    } else if ((cpuChoice === "SCISSORS") && (inputValue === "PAPER")) {
-        lose()
-    } else if ((cpuChoice === "PAPER") && (inputValue === "SCISSORS")) {
-        win()
-    } else if ((cpuChoice === "ROCK") && (inputValue === "PAPER")) {
-        win()
-    }   else if ((cpuChoice === "SCISSORS") && (inputValue === "ROCK")) {
-        win()
-    } 
+    } else if (inputValue === "PAPER") {
+        cpuChoice === "SCISSORS" ? lose() : win()  
+    } else if(inputValue === "ROCK") {
+        cpuChoice === "PAPER" ? lose() : win() 
+    } else if (inputValue === "SCISSORS") {
+        cpuChoice === "ROCK" ? lose() : win()
+    }
 }
 
 
